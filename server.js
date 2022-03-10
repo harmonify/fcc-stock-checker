@@ -29,7 +29,8 @@ app.use(helmet({
     // configure
     directives: {
       defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'"],
+      styleSrc: ["'self'"],
+      scriptSrc: ["'self'"],
     },
   },
 }));
