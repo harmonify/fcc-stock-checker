@@ -38,8 +38,8 @@ module.exports = function (app) {
           like
         );
         result = [
-          { ...stockResult1, rel_likes: stockResult1.likes, likes: undefined },
-          { ...stockResult2, rel_likes: stockResult2.likes, likes: undefined },
+          { ...stockResult1, rel_likes: stockResult1.likes - stockResult2.likes, likes: undefined },
+          { ...stockResult2, rel_likes: stockResult2.likes - stockResult1.likes, likes: undefined },
         ];
       }
 
