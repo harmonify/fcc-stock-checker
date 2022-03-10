@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 if (process.env.NODE_ENV === "test") {
   dotenv.config({
-    path: path.join(__dirname, ".env.test"),
+    path: path.join(__dirname, "test.env"),
     override: true,
   });
 }
