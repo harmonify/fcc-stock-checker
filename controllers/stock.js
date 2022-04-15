@@ -28,11 +28,7 @@ class StockController {
       const stock = await axios.get(url);
       return stock.data;
     } catch (error) {
-      console.error(error);
-      throw new ErrorStatus(
-        "Something went wrong while fetching stock data.",
-        502
-      );
+      throw new ErrorStatus(error.response.data, 502);
     }
   }
 
